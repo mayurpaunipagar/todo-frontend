@@ -19,7 +19,7 @@ export default function LoginForm(props){
             ></input>
             {props.error ? <div className="error">{props.error}</div>:null}
             <button onClick={()=> props.signupHandler(username,password)}>Sign Up</button>
-            <button onClick={()=> props.signinHandler(username,password)}>Log In</button>
+            <button onClick={()=> props.signinHandler(username,password)}>Sign In</button>
         </div>
     );
 }
