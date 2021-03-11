@@ -6,12 +6,12 @@ import { useState } from 'react';
 function App() {
   const [loggedIn,setLoggedIn]=useState(false);
   const [error,setError]=useState(undefined);
-  const signinHandler=(username,password)=>{
+  const signupHandler=(username,password)=>{
     loginSignUp('https://todo-backend-mayur.herokuapp.com/signup',
             username,
             password);
   }
-  const signupHandler=(username,password)=>{
+  const signinHandler=(username,password)=>{
     loginSignUp('https://todo-backend-mayur.herokuapp.com/login',
             username,
             password);
