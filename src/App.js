@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import LoginForm from './components/LoginForm';
 import { useEffect, useState } from 'react';
-
+import TodoList from './components/TodoList';
 function App() {
   const [loggedIn,setLoggedIn]=useState(false);
   const [error,setError]=useState(undefined);
@@ -78,7 +78,7 @@ function App() {
   return (
     <div className="App">
       <h1>Mayur's Todo App</h1>
-      {loggedIn?<h2>My todo list</h2>:
+      {loggedIn?<TodoList username={userName} logoutHandler={logoutHandler}/>:
       <LoginForm
         signinHandler={signinHandler}
         signupHandler={signupHandler}
