@@ -31,7 +31,7 @@ export default function TodoList(props) {
 
   const deleteHandler = (itemIdx) => {
     const idToDelete = items[itemIdx]._id;
-    fetch(`https://todo-backend-mayur.herokuapp.com/${idToDelete}`, {
+    fetch(`https://todo-backend-mayur.herokuapp.com/todo/${idToDelete}`, {
       method: "DELETE", credentials: "include"  
     }).then((r) => {
       console.log("Got successfully DELETE");
@@ -42,7 +42,7 @@ export default function TodoList(props) {
 
   const editHandler = (editedValue, itemIdx) => {
     const idToEdit = items[itemIdx]._id;
-    fetch(`https://todo-backend-mayur.herokuapp.com/${idToEdit}`, {
+    fetch(`https://todo-backend-mayur.herokuapp.com/todo/${idToEdit}`, {
       method: "PUT",
       body: JSON.stringify({ task: editedValue }),
       headers: {
